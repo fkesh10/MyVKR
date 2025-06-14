@@ -1,0 +1,52 @@
+// Last scan: 2025-06-13 18:12:35
+// Launch args: --urls_list D:\CODES\ssti_project\auxiliary_tool\urls.txt --method BOTH --delay 0.0 --timeout 5 --verbose --low_test
+[
+    {
+        "url": "http://127.0.0.1:5000/calc/",
+        "method": "BOTH",
+        "param": null,
+        "config": {
+            "delay": 0.0,
+            "timeout": 5,
+            "proxy": null,
+            "custom_payloads_path": null
+        },
+        "steps": {
+            "finder": [
+                {
+                    "type": "form_field",
+                    "form_method": "POST",
+                    "name": "code",
+                    "action": "http://127.0.0.1:5000/calc/"
+                }
+            ],
+            "detector": {
+                "engine": "jinja2"
+            }
+        }
+    },
+    {
+        "url": "http://127.0.0.1:4000",
+        "method": "BOTH",
+        "param": null,
+        "config": {
+            "delay": 0.0,
+            "timeout": 5,
+            "proxy": null,
+            "custom_payloads_path": null
+        },
+        "steps": {
+            "finder": [
+                {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "search",
+                    "url": "http://127.0.0.1:4000/?search="
+                }
+            ],
+            "detector": {
+                "engine": "jinja2"
+            }
+        }
+    }
+]
