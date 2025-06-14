@@ -1,0 +1,10 @@
+[1] Payload: {{7*7}}
+    Target: http://localhost:9000/?username=
+    Method: GET
+    Status: 200
+    Error: 
+    Response (preview):
+Welcome 49!
+    Full HTML:
+Welcome 49!
+============================================================

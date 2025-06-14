@@ -1,0 +1,24 @@
+{
+    "url": "http://localhost:9000/?username=",
+    "method": "BOTH",
+    "param": null,
+    "config": {
+        "delay": 0.0,
+        "timeout": 5,
+        "proxy": null,
+        "custom_payloads_path": null
+    },
+    "steps": {
+        "finder": [
+            {
+                "type": "url_param",
+                "method": "GET",
+                "name": "username",
+                "url": "http://localhost:9000/?username="
+            }
+        ],
+        "detector": {
+            "engine": "twig"
+        }
+    }
+}

